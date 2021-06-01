@@ -6,3 +6,10 @@ inc = cm/2.54
 num_ft = inc/12
 
 print(cm, num_ft, inc )
+
+
+def mensaje():
+    print("Hola mundo.")
+
+
+mensaje()
