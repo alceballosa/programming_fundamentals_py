@@ -30,8 +30,9 @@ def creaVector(n):
 
     El vector.
     """
-
-    return [0] * (n + 1)
+    v = [None] * (n + 1)
+    v[0] = 0
+    return v
 
 
 # En la documentación esta función se conoce como construyeVector,
@@ -47,7 +48,7 @@ def inicializaVector(V, n, rango):
     Parámetros de entrada:
 
     V - el vector a modificar (vector)
-    n - el tamaño del vector (int)
+    n - hasta donde se inicializa el vector (int)
     rango - limite superior del rango de valores posibles (int)
 
 
@@ -147,7 +148,8 @@ def sumaVector(V):
 
 def agregarDato(d, V, n):
     """
-    Función para agregar un dato a un vector.
+    Función para agregar un dato a un vector
+    al final.
 
     ------------------------------------------------------------
 

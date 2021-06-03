@@ -11,13 +11,16 @@ vector.imprimeVector(vec1, "Vector al comenzar")
 print("Resultado de preguntar si el vector está vacío:", vector.esVacio(vec1))
 
 
-
 # %%
 # Inicialización del vector
-vector.inicializaVector(vec1, 16, 99)
+vector.inicializaVector(vec1, tamano//10, 99)
 vector.imprimeVector(vec1, "Vector inicializado aleatoriamente")
-print("Resultado de preguntar si el vector está vacío:", vector.esLleno(vec1))
+print("Resultado de preguntar si el vector está vacío:", vector.esLleno(vec1, tamano))
 
+
+#%%
+total = vector.sumaVector(vec1)
+print("El total de valores en vector es:",total)
 
 
 # %%
@@ -32,7 +35,6 @@ vector.imprimeVector(vec1, "Vector tras borrar datos")
 # Agregar un dato nuevo al final
 dato_nuevo = int(input("Ingrese un valor para añadir al vector"))
 vector.agregarDato(50, vec1, tamano)
-
 
 
 #%%
