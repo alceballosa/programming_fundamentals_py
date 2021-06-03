@@ -249,7 +249,13 @@ def intercambiar(V, i, j):
     Valores de salida:
     Ninguno (V es mutable, por lo tanto se modifica el vector original)
     """
-    pass
+    if i > V[0] or j > V[0]:
+        print("Indices fuera del rango del vector")
+    else:
+        aux = V[i]
+        V[i] = V[j]
+        V[j] = aux
+        
 
 
 """
