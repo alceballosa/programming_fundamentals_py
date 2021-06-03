@@ -144,7 +144,8 @@ def sumaVector(V):
     return suma
 
 
-#Implementemos juntos las siguientes funcionalidades
+# Implementemos juntos las siguientes funcionalidades
+
 
 def agregarDato(d, V, n):
     """
@@ -161,7 +162,12 @@ def agregarDato(d, V, n):
     Valores de salida:
     Ninguno (V es mutable, por lo tanto se modifica el vector original)
     """
-    pass
+    if esLleno(V, n):
+        print("El vector está lleno.")
+    else:
+        ultima_posicion = V[0]
+        V[ultima_posicion + 1] = d
+        V[0] += 1
 
 
 def mayorDato(V):
@@ -181,7 +187,17 @@ def mayorDato(V):
     Valores de salida:
     Valor entero: posición del mayor dato en el vector.
     """
-    pass
+    mayor_dato = None
+    posicion_mayor_dato = None
+
+    for i in range(1, V[0] + 1):
+
+        # el operador is es el == para comparar con None
+        if mayor_dato is None or V[i] > mayor_dato:
+            mayor_dato = V[i]
+            posicion_mayor_dato = i
+
+    return posicion_mayor_dato
 
 
 def menorDato(V):
@@ -201,7 +217,18 @@ def menorDato(V):
     Valores de salida:
     Valor entero: posición del menor dato en el vector.
     """
-    pass
+    menor_dato = None
+    posicion_menor_dato = None
+
+    for i in range(1, V[0] + 1):
+
+        # el operador is es el == para comparar con None
+        if menor_dato is None or V[i] < menor_dato:
+            menor_dato = V[i]
+            posicion_menor_dato = i
+
+    return posicion_menor_dato
+
 
 
 def intercambiar(V, i, j):
