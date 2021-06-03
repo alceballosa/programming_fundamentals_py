@@ -18,6 +18,8 @@ def creaVector(n):
     El vector tiene n + 1 posiciones, donde la posición 0
     representa el número de posiciones llenas del vector.
 
+    Nota: la clase vector está diseñada para manejar enteros.
+
     ------------------------------------------------------------
 
     Parámetros de entrada:
@@ -36,7 +38,7 @@ def creaVector(n):
 # pero realmente lo que hace es inicializar sus valores.
 def inicializaVector(V, n, rango):
     """
-    Inicializa los valores de un vector con valores
+    Inicializa todas las posiciones de un vector con valores
     enteros aleatorios entre 1 y un limite superior
     rango.
 
@@ -51,7 +53,6 @@ def inicializaVector(V, n, rango):
 
 
     Valores de salida:
-
     Ninguno (V es mutable, por lo tanto se modifica el vector original)
     """
 
@@ -70,12 +71,10 @@ def imprimeVector(V, mensaje="Vector sin nombre"):
     ------------------------------------------------------------
 
     Parámetros de entrada:
-
     V - el vector que se va a imprimir (vector)
 
 
     Valores de salida:
-
     Ninguno
     """
 
@@ -95,7 +94,6 @@ def esVacio(V):
 
 
     Valores de salida:
-
     Valor booleano: True si el vector está vacío, False de lo contrario.
     """
 
@@ -148,18 +146,80 @@ def sumaVector(V):
 #Implementemos juntos las siguientes funcionalidades
 
 def agregarDato(d, V, n):
+    """
+    Función para agregar un dato a un vector.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    d - el dato a ingresar en el vector (int)
+    V - el vector al que se le va a agregar el dato (vector)
+    n - el tamaño del vector (int)
+
+    Valores de salida:
+    Ninguno (V es mutable, por lo tanto se modifica el vector original)
+    """
     pass
 
 
 def mayorDato(V):
+    """
+    Función para encontrar la posición del
+    mayor valor en un vector.
+
+    Si el valor se encuentra repetido, se
+    imprime la posición de la primera
+    ocurrencia.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector que se va a revisar (vector)
+
+    Valores de salida:
+    Valor entero: posición del mayor dato en el vector.
+    """
     pass
 
 
 def menorDato(V):
+    """
+    Función para encontrar la posición del
+    menor valor en un vector.
+
+    Si el valor se encuentra repetido, se
+    imprime la posición de la primera
+    ocurrencia.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector que se va a revisar (vector)
+
+    Valores de salida:
+    Valor entero: posición del menor dato en el vector.
+    """
     pass
 
 
 def intercambiar(V, i, j):
+    """
+    Función para intercambiar los valores de dos
+    posiciones en un vector.
+
+    Si las dos posiciones son inválidas, debe
+    imprimir un mensaje de error.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector donde se hará el intercambio (vector)
+    i - la primera posición para el intercambio.
+    j - la otra posición para el intercambio.
+
+    Valores de salida:
+    Ninguno (V es mutable, por lo tanto se modifica el vector original)
+    """
     pass
 
 
@@ -176,10 +236,37 @@ o.OOOo.   ooOoOOo    Oo    OooOOo.   .oOOOo.  .oOOOo.  ooOoOOo oOoOOoOOo ooOoOOo
 
 
 def buscarDondeInsertar(V, d):
+    """
+    Función para encontrar la posición en la que
+    insertar un valor en un vector ordenado.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector en el que se va a insertar el valor (vector)
+    d - el dato que se desea insertar
+
+    Valores de salida:
+    Valor entero: posición en la que se va a insertar el valor.
+    """
     pass
 
 
 def insertar(V, d, k):
+    """
+    Función para insertar un valor en un vector
+    en una posición dada.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector en el que se va a insertar el valor (vector)
+    d - el dato que se desea insertar (int)
+    k - la posición en la que se va a insertar el valor (int)
+
+    Valores de salida:
+    Ninguno (V es mutable, por lo tanto se modifica el vector original)
+    """
     pass
 
 
@@ -196,8 +283,37 @@ o.OOOo.   ooOoOOo    Oo    OooOOo.   .oOOOo.  .oOOOo.  ooOoOOo oOoOOoOOo ooOoOOo
 
 
 def buscarDato(V, d):
+    """
+    Función para encontrar la posición de un valor
+    en un arreglo.
+
+    Si el valor se encuentra más de una vez, devuelve
+    la primera posición en la que se encuentra.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector en el que se hará la búsqueda (vector)
+    d - el dato que se desea buscar
+
+    Valores de salida:
+    Valor entero: posición en la que se encuentra el valor.
+    """
     pass
 
 
 def borrar(V, i):
+    """
+    Función para borrar un valor de un vector,
+    dada su posición.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector en el que se va a insertar el valor (vector)
+    i - la posición del dato que se desea eliminar (int)
+
+    Valores de salida:
+    Ninguno (V es mutable, por lo tanto se modifica el vector original)
+    """
     pass

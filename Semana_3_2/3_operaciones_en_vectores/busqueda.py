@@ -11,6 +11,20 @@ o.OOOo.   ooOoOOo    Oo    OooOOo.   .oOOOo.  .oOOOo.  ooOoOOo oOoOOoOOo ooOoOOo
 
 
 def bussec(V, d):
+
+    """
+    Función para realizar una búsqueda secuencial sobre un vector.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector que se va a revisar (vector)
+    d - el valor que se va a buscar en el arreglo (int)
+
+    Valores de salida:
+
+    Valor entero: la posición del valor d si lo encuentra, -1 de lo contrario.
+    """
     i = 1
     while i <= V[0] and d != V[i]:
         i = i + 1
@@ -20,6 +34,21 @@ def bussec(V, d):
 
 
 def busbin(V, d):
+    """
+    Función para realizar una búsqueda binaria sobre
+    un vector.
+
+    ------------------------------------------------------------
+
+    Parámetros de entrada:
+    V - el vector que se va a revisar (vector)
+    d - el valor que se va a buscar en el arreglo (int)
+
+    Valores de salida:
+
+    Valor entero: la posición del valor d si lo encuentra, -1 de lo contrario.
+    """
+
     inicio = 1
     fin = V[0]
     while inicio <= fin:
