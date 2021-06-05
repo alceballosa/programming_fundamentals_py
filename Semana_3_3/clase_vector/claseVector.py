@@ -75,6 +75,12 @@ class vector:
         """
         return self.V[0]
 
+    def __len__(self):
+        return self.V[0]
+
+    def __str__(self):
+        return str(self.V)
+
     # FUNCIÓN NUEVA
     def tamagno(self):
         """

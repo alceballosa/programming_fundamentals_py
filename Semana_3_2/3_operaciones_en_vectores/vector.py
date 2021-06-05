@@ -368,4 +368,7 @@ def borrar(V, i):
 
     for j in range(i, V[0]):
         V[j] = V[j + 1]
+        
+    posicion_final = V[0]
+    V[posicion_final] = None
     V[0] = V[0] - 1

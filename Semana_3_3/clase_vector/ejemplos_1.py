@@ -6,6 +6,10 @@ vec = vector(n)
 porcion_a_llenar = n // 2
 vec.construyeVector(porcion_a_llenar, 100)
 vec.imprimeVector("Vector de prueba")
+longitud = len(vec)
+print(vec)
+
+print("La longitud del vector es,", longitud)
 mayda = vec.mayor()
 menda = vec.menor()
 print("El mayor dato está en la posición ", mayda, "y es", vec.retornaDato(mayda))

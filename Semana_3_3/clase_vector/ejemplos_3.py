@@ -2,7 +2,7 @@ from claseVector import vector
 
 n = int(input("Entre tamaño del primer vector: "))
 a = vector(n)
-a.construyeVector(n)
+a.construyeVector(a.tamagno())
 m = int(input("Entre tamaño del segundo vector: "))
 b = vector(m)
 b.construyeVector(m)

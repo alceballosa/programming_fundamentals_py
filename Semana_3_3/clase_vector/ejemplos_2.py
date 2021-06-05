@@ -3,7 +3,7 @@ from claseVector import vector
 n = int(input("Entre tamaño del vector: "))
 vec = vector(n)
 
-porcion_a_llenar = n // 2
+porcion_a_llenar = vec.tamagno() // 2
 vec.construyeVector(porcion_a_llenar, 100)
 vec.imprimeVector("Vector de prueba creado")
 vec.agregarDato(13)

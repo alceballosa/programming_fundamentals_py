@@ -17,7 +17,7 @@ print("Resultado de preguntar si el vector está vacío:", vector.esVacio(vec1))
 # Inicialización del vector
 vector.inicializaVector(vec1, tamano // 2, 99)
 vector.imprimeVector(vec1, "Vector inicializado aleatoriamente")
-print("Resultado de preguntar si el vector está vacío", vector.esLleno(vec1, tamano))
+print("Resultado de preguntar si el vector está vacío", vector.esVacio(vec1))
 
 
 #%%
@@ -66,7 +66,7 @@ if pos_borrar == -1:
     print("El dato no se encontró en el arreglo.")
 else:
     print("El dato se borró exitosamente.")
-    # ¿Qué nos falta para borrar el dato?
+    vector.borrar(vec1, pos_borrar)
 vector.imprimeVector(vec1, "Vector tras intentar borrar el segundo dato: ")
 
 # %%
@@ -80,13 +80,13 @@ vector.imprimeVector(vec1, "Vector después de agregar el valor nuevo")
 # %%
 # Ordenar un vector
 
-ordenamiento.burbuja(vec1)
+ordenamiento.seleccion(vec1)
 vector.imprimeVector(vec1, "Vector ordenado")
 
 # %%
 # Insertar un dato en un vector ordenado
 
-dato = 5
+dato = 68
 posicion_ins = vector.buscarDondeInsertar(vec1, dato)
 vector.imprimeVector(vec1, "Vector antes de insertar")
 vector.insertar(vec1, dato, posicion_ins)
@@ -95,7 +95,7 @@ vector.imprimeVector(vec1, "Vector después de insertar")
 #%%
 # Buscar un dato en un vector ordenado
 
-dato_para_buscar = 222
+dato_para_buscar = 70
 posicion = busqueda.bussec(vec1, dato_para_buscar)
 if posicion == -1:
     print("El valor no se encuentra en el arreglo.")
