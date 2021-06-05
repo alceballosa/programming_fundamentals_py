@@ -17,7 +17,8 @@ def seleccion(V):
     Función para ordenar un vector mediante el método
     de ordenamiento por selección.
 
-    Más información: https://www.ecured.cu/Algoritmo_de_ordenamiento_por_selecci%C3%B3n
+    Más información:
+    https://www.ecured.cu/Algoritmo_de_ordenamiento_por_selecci%C3%B3n
 
     ------------------------------------------------------------
 
@@ -54,7 +55,8 @@ def burbuja(V):
     Función para ordenar un vector mediante el método
     de ordenamiento de burbuja.
 
-    Más información: https://www.ecured.cu/Ordenamiento_de_burbuja
+    Más información:
+    https://www.ecured.cu/Ordenamiento_de_burbuja
 
     ------------------------------------------------------------
 
@@ -82,12 +84,14 @@ o.OOOo.   ooOoOOo    Oo    OooOOo.   .oOOOo.  .oOOOo.  ooOoOOo oOoOOoOOo ooOoOOo
  OooOO'   ooOOoOo O.     O o'        `OoooO'   `oooO'  ooOOoOo     o'    ooOOoOo   `o'     O.     O       OooOO OooOO
 """
 
+
 def insercion(V):
     """
     Función para ordenar un vector mediante el método
     de ordenamiento por inserción.
 
-    Más información: https://www.ecured.cu/Ordenamiento_por_Inserci%C3%B3n
+    Más información:
+    https://www.ecured.cu/Ordenamiento_por_Inserci%C3%B3n
 
     ------------------------------------------------------------
 

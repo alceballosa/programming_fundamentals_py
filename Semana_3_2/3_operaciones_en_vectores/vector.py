@@ -79,7 +79,7 @@ def imprimeVector(V, mensaje="Vector sin nombre"):
     Ninguno
     """
 
-    print("\n", mensaje, end=":\n")
+    print("\n", mensaje + ":\n")
     for i in range(1, V[0] + 1):
         print(V[i], end=", ")
 
@@ -142,9 +142,6 @@ def sumaVector(V):
     for i in range(1, V[0] + 1):
         suma += V[i]
     return suma
-
-
-# Implementemos juntos las siguientes funcionalidades
 
 
 def agregarDato(d, V, n):
@@ -230,7 +227,6 @@ def menorDato(V):
     return posicion_menor_dato
 
 
-
 def intercambiar(V, i, j):
     """
     Función para intercambiar los valores de dos
@@ -255,7 +251,6 @@ def intercambiar(V, i, j):
         aux = V[i]
         V[i] = V[j]
         V[j] = aux
-        
 
 
 """
@@ -284,7 +279,10 @@ def buscarDondeInsertar(V, d):
     Valores de salida:
     Valor entero: posición en la que se va a insertar el valor.
     """
-    pass
+    k = 1
+    while k <= V[0] and V[k] < d:
+        k = k + 1
+    return k
 
 
 def insertar(V, d, k):
@@ -302,7 +300,15 @@ def insertar(V, d, k):
     Valores de salida:
     Ninguno (V es mutable, por lo tanto se modifica el vector original)
     """
-    pass
+
+    if k > V[0]:
+        print("Posición fuera del rango de posiciones del vector.")
+        return
+
+    for i in range(V[0], k - 1, -1):
+        V[i + 1] = V[i]
+    V[k] = d
+    V[0] += 1
 
 
 """
@@ -334,7 +340,12 @@ def buscarDato(V, d):
     Valores de salida:
     Valor entero: posición en la que se encuentra el valor.
     """
-    pass
+    i = 1
+    while i <= V[0] and V[i] != d:
+        i = i + 1
+    if i <= V[0]:
+        return i
+    return -1
 
 
 def borrar(V, i):
@@ -351,4 +362,10 @@ def borrar(V, i):
     Valores de salida:
     Ninguno (V es mutable, por lo tanto se modifica el vector original)
     """
-    pass
+    if i > V[0]:
+        print("Posición fuera del rango de posiciones del vector.")
+        return
+
+    for j in range(i, V[0]):
+        V[j] = V[j + 1]
+    V[0] = V[0] - 1

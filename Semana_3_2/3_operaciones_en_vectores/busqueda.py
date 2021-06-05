@@ -8,6 +8,7 @@ o.OOOo.   ooOoOOo    Oo    OooOOo.   .oOOOo.  .oOOOo.  ooOoOOo oOoOOoOOo ooOoOOo
  o    .O'    O    o      O O        `o     O' O.    .O    O        O        O     `o  O    o      O         O    .O
  OooOO'   ooOOoOo O.     O o'        `OoooO'   `oooO'  ooOOoOo     o'    ooOOoOo   `o'     O.     O       OooOO oOoOoO
 """
+import math
 
 
 def bussec(V, d):
@@ -28,9 +29,10 @@ def bussec(V, d):
     i = 1
     while i <= V[0] and d != V[i]:
         i = i + 1
-        if i == V[0]:
-            return i
-    return -1
+    if i <= V[0]:
+        return i
+    else:
+        return -1
 
 
 def busbin(V, d):
@@ -52,7 +54,9 @@ def busbin(V, d):
     inicio = 1
     fin = V[0]
     while inicio <= fin:
-        mitad = (inicio + fin) / 2
+        #nota: la función math.ceil hace redondeo hacia arriba
+        #ej: 3.3 -> 4; 3.6 -> 4
+        mitad = math.ceil((inicio + fin) / 2)
         if V[mitad] == d:
             return mitad
         if d < V[mitad]:
