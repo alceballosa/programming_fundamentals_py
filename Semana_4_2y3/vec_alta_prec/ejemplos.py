@@ -1,0 +1,1 @@
+from claseVecAP import altaPrecision
