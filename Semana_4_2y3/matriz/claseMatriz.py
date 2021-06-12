@@ -69,7 +69,43 @@ class matriz:
 
     def traspuesta(self):
         c = matriz(self.n, self.m)
-        for i in range(1, self.m+1):
-            for j in range(1, self.n+1):
+        for i in range(1, self.m + 1):
+            for j in range(1, self.n + 1):
                 c.mat[j][i] = self.mat[i][j]
         return c
+
+    def __add__(self, other):
+
+        if self.n != other.n or self.m != other.m:
+            print("Los tamaños de las matrices deben ser iguales")
+            return None
+        else:
+            c = matriz(self.n, self.m)
+            for i in range(1, self.n + 1):
+                for j in range(1, self.m + 1):
+                    c.mat[i][j] = self.mat[i][j] + other.mat[i][j]
+            return c
+
+    def __mul__(self, b):
+        c = matriz(self.m, self.n)
+        if type(b) == int:
+            for i in range(1, self.m + 1):
+                for j in range(1, self.n + 1):
+                    c.mat[i][j] = self.mat[i][j] * b
+            return c
+
+        if self.n != b.m:
+            print("Matrices no se pueden multiplicar. ", end="")
+            print("El número de columnas de self es diferente", end="")
+            print("del número de columnas de b")
+            return None
+        c = matriz(self.m, b.n)
+        for i in range(1, self.m + 1):
+            for j in range(1, b.n + 1):
+                c.mat[i][j] = 0
+                for k in range(1, self.n + 1):
+                    c.mat[i][j] = c.mat[i][j] + self.mat[i][k] * b.mat[k][j]
+        return c
+
+    def __rmul__(self, b):
+        return self * b
