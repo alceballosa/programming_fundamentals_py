@@ -109,3 +109,49 @@ class matriz:
 
     def __rmul__(self, b):
         return self * b
+
+    def sumaDiagonal(self):
+        s = 0
+        for i in range(1, self.m + 1):
+            s += self.mat[i][i]
+        return s
+
+    def sumaDiagonalSecundaria(self):
+        s = 0
+        for i in range(1, self.m + 1):
+            j = self.n + 1 - i
+            s += self.mat[i][j]
+        return s
+
+    def sumaTriangularInferior(self):
+        s = 0
+        for i in range(1, self.m + 1):
+            for j in range(1, i + 1):
+                s = s + self.mat[i][j]
+        return s
+
+    def sumaTriangularEstrictamenteInferior(self):
+        s = 0
+        for i in range(2, self.m + 1):
+            for j in range(1, i):
+                s = s + self.mat[i][j]
+        return s
+
+    def sumaTriangularSuperior(self):
+        s = 0
+        for i in range(1, self.m + 1):
+            for j in range(i, self.n + 1):
+                s = s + self.mat[i][j]
+        return s
+
+    def sumaTriangularEstrictamenteSuperior(self):
+        s = 0
+        for i in range(1, self.m):
+            for j in range(i + 1, self.n + 1):
+                s = s + self.mat[i][j]
+        return s
+
+    def __getitem__(self, index):
+        if index > self.m:
+            raise IndexError('End')
+        return self.mat[index]
