@@ -61,8 +61,7 @@ class altaPrecision(vector):
             i = i - 1
             j = j - 1
             k = k - 1
-            #resultado.imprimeVector()
-            print("-----------")
+            # resultado.imprimeVector()
         while i > self.V[0]:
             r = self.sumaYacarreo(self.retornaDato(i), 0)
             resultado.asignaDato(r, k)
@@ -78,3 +77,40 @@ class altaPrecision(vector):
             k = k - 1
         resultado.V[0] = k
         return resultado
+
+    def __mul__(self, b):
+        """
+        Multiplicación de un vector por un escalar.
+        """
+
+        if type(b) == int:
+
+            vector_acum = altaPrecision(1)
+            vector_acum.asignaValor(0)
+            for i in range(0, b):
+                vector_acum = vector_acum + self
+            return vector_acum
+        else:
+            print("Operación no definida.")
+
+    def __rmul__(self, operando_a_la_izquierda):
+        return self * operando_a_la_izquierda
+
+    def multiplicacion_con_problemas_de_mutabilidad(self, b):
+        """
+        Multiplicación de un vector por un escalar.
+
+        Retorna otro vector si b >= 2.
+
+        Retorna el mismo vector self como objeto mutable si b = 1.
+
+        """
+
+        if type(b) == int:
+
+            vector_acum = self
+            for i in range(1, b):
+                vector_acum = vector_acum + self
+            return vector_acum
+        else:
+            print("Operación no definida.")
