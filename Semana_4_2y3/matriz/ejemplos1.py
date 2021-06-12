@@ -18,7 +18,6 @@ def crear_matriz(filas, columnas, val):
 
     return mat
 
-
 val = 20
 mi_matriz = crear_matriz(8, 3, val)
 
@@ -43,3 +42,17 @@ for i in range(filas):
     for j in range(columnas):
         print(mi_matriz[i][j], end = " ")
     print("]")
+
+#--------------------------- MATRIZ ALEATORIA -------------------
+import random
+
+fs = int(input("Ingrese las filas: "))
+cs = int(input("Ingrese las columnas: "))
+
+m = crear_matriz(fs, cs, None)
+
+for i in range(fs):
+    for j in range(cs):
+        m[i][j] = random.randint(0,9 )
+
+print(m)
