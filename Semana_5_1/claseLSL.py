@@ -34,20 +34,33 @@ class LSL:
         return p is None
 
     def recorrerLista(self):
-        p = self.primerNodo()
-        while not self.finDeRecorrido(p):
-            print(p.retornarDato(), end=", ")
-            p = p.retornarLiga()
+        """
+        Recorre la lista y la imprime con formato
+        """
+        nodo = self.primerNodo()
+        indice = 0
+        print("Lista: ")
+        while not (nodo is None):
+            if nodo.liga is None:
+                repr_liga = ""
+            else:
+                repr_liga = "->"
+
+            print(f"[p{indice}|{nodo.retornarDato()}]{repr_liga}", end="")
+            nodo = nodo.retornarLiga()
+            indice = indice + 1
+        print("\n")
 
     def agregarDato(self, d):
-        x = nodoSimple(d)
-        p = self.primerNodo()
-        if p is None:
-            self.primero = x
-            self.ultimo = x
+        """Ingresa un dato en un nuevo nodo al final de la lista"""
+        nuevo = nodoSimple(d)
+        primero = self.primerNodo()
+        if primero is None:
+            self.primero = nuevo
+            self.ultimo = nuevo
         else:
-            self.ultimo.liga = x
-            self.ultimo = x
+            self.ultimo.liga = nuevo
+            self.ultimo = nuevo
 
     def buscarDondeInsertar(self, d):
         p = self.primerNodo()

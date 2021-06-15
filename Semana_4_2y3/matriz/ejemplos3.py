@@ -11,3 +11,5 @@ m2.imprimeMatrizPorFilas()
 
 m3 = m1 + m2
 m3.imprimeMatrizPorFilas()
+
+print(m3)
