@@ -1,0 +1,36 @@
+from claseLSL import LSL, nodoSimple
+
+mi_lista = LSL()
+for i in range(1, 10):
+    d = input("Entre dato: ")
+    y = mi_lista.buscarDondeInsertar(d)
+    mi_lista.insertar(d, y)
+d = input("Entre más datos:")
+while d != "0":
+    mi_lista.agregarDato(d)
+    d = input("Entre más datos: ")
+mi_lista.recorrerLista()
+longitud = mi_lista.longitud()
+print(longitud)
+
+print("-------------------------------------")
+
+y = nodoSimple()
+x = mi_lista.buscarDato("a", y)
+mi_lista.borrar(x, y)
+print("despues de borrar primer vez")
+mi_lista.recorrerLista()
+longitud = mi_lista.longitud()
+print(longitud)
+x = mi_lista.primerNodo()
+mi_lista.borrar(x)
+print("despues de borrar segunda vez")
+mi_lista.recorrerLista()
+longitud = mi_lista.longitud()
+print(longitud)
+x = mi_lista.buscarDato("z", y)
+mi_lista.borrar(x)
+print("despues de borrar tercera vez")
+mi_lista.recorrerLista()
+longitud = mi_lista.longitud()
+print(longitud)
