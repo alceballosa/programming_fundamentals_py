@@ -13,7 +13,7 @@ print(mis_estudiantes[0].notas)
 
 estudiante = mis_estudiantes[0]
 promedio = estudiante.obtener_promedio()
-print(f"El estudiante {estudiante.id}" tiene un promedio de {promedio})
+print(f"El estudiante {estudiante.id} tiene un promedio de {promedio}")
 
 
 ### ELABORAR UN PEDAZO DE CÓDIGO QUE PERMITA CALCULAR EL PROMEDIO DEL SALÓN ###
@@ -22,4 +22,3 @@ print(f"El estudiante {estudiante.id}" tiene un promedio de {promedio})
 
 
 ### ELABORAR OTRO QUE SAQUE EL MÍNIMO Y EL MÁXIMO, Y QUIÉNES LAS TIENEN
-
