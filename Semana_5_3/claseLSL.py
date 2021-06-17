@@ -1,29 +1,3 @@
-import random
-
-
-class Estudiante:
-    def __init__(self, id):
-        self.id = id
-        self.notas = []
-        for i in range(5):
-            self.notas.append(random.randint(0, 5))
-
-    #igual a
-    def __eq__(self, other):
-        son_iguales = self.id == other.id
-        return son_iguales
-
-    #mayor que
-    def __gt__(self, other):
-        mayor_que = self.id > other.id
-        return mayor_que
-
-    #diferente de
-    def __ne__(self, other):
-        diferente = self.id != other.id
-        return diferente
-
-
 class nodoSimple:
     def __init__(self, d=None):
         self.dato = d
