@@ -2,7 +2,7 @@
 Ejercicio 1: dada la clase LSL...
 
 a. Implementar un método intercambiar que permita cambiar de lugar dos nodos en la lista.
-b. Implemenar el método de ordenamiento por selección.
+b. Implementar el método de ordenamiento por selección.
 """
 
 
@@ -33,7 +33,7 @@ inventario de 10 jugos, los cuales se venden por 2000 pesos c/u.
 
 Para simular lo que pasa en cada minuto, debe usar una variable aleatoria que tome valores entre 1 y 3.
 
-Si el valor es 1, llega un cliente nuevo con una edad aleatoria entre 10 y 80.
+Si el valor es 1, llega un cliente nuevo con una edad aleatoria entre 10 y 80. Pista: clase Cliente.
 
 Si el valor es 2 y la longitud de la cola es mayor a 3, el último cliente de la cola se cansa de esperar
 y se marcha.

@@ -219,3 +219,36 @@ class LSL:
                     raise IndexError("Valor por fuera de los límites de la lista.")
                 j += 1
             return nodo.dato
+
+    def intercambiar(self, nodo0, nodo1, nodo2):
+        """
+        Intercambia las posiciones de dos nodos (nodo1, nodo2) en una LSL.
+
+        Requiere también el nodo anterior a nodo1 (nodo0) para actualizar su
+        liga.
+        """
+        if nodo1 is self.primerNodo():
+            #primer caso, intercambia con un nodo intermedio
+            if nodo2 != self.ultimoNodo():
+                liga_aux = nodo2.retornarLiga()
+                nodo2.liga = nodo1
+                nodo1.liga = liga_aux
+                self.primero = nodo2
+            else:
+                liga_aux = nodo2.retornarLiga()
+                nodo2.liga = nodo1
+                nodo1.liga = liga_aux
+                self.primero = nodo2
+                self.ultimo = nodo1
+        else:
+            if nodo2 != self.ultimoNodo():
+                nodo0.liga = nodo2
+                liga_aux = nodo2.retornarLiga()
+                nodo2.liga = nodo1
+                nodo1.liga = liga_aux
+            else:
+                nodo0.liga = nodo2
+                liga_aux = nodo2.retornarLiga()
+                nodo2.liga = nodo1
+                nodo1.liga = liga_aux
+                self.ultimo = nodo1

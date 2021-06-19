@@ -27,6 +27,6 @@ class Pila(LSL):
         print("\n")
 
     def desapilar(self):
-        dato = self.primero.retornarDato()
-        self.eliminar(self.primero, anterior=None)
+        dato = self.primerNodo().retornarDato()
+        self.eliminar(self.primerNodo(), anterior=None)
         return dato
