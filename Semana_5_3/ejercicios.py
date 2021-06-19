@@ -11,7 +11,7 @@ Ejercicio 2: elaborar un algoritmo que haga lo siguiente:
 
 a. Crear una pila vacía y llenarla con 10 valores enteros aleatorios entre el 0 y el 10.
 
-b. Utílice solo las operaciones de la cola para implementar un método eliminar_dato que
+b. Utílice solo las operaciones de la pila para implementar un método eliminar_dato que
 elimine todas las ocurrencias de un valor v.
 
 Pista: puede usar una pila secundaria.
