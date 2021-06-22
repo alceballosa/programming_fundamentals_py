@@ -1,0 +1,10 @@
+Task Type,Priority,Effort,Time
+Feature,Must Have,30,40
+Feature,Good,20,40
+Feature,Nice to Have,15,20
+Bug,Fix ASAP,2,2
+Bug,Fix,2,8
+Bug,Fix if Time,5,12
+User Story,Must Have, 8, 10
+User Story,Good, 5, 7
+User Story,Nice to Have, 8, 7

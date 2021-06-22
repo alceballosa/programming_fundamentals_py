@@ -1,6 +1,7 @@
 import random
 
 
+
 class Estudiante:
     def __init__(self, id):
         self.id = id

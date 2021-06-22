@@ -1,3 +1,31 @@
+import random
+
+class Estudiante:
+    def __init__(self, id):
+        self.id = id
+        self.notas = []
+        for i in range(5):
+            self.notas.append(random.randint(0, 5))
+
+    # igual a
+    def __eq__(self, other):
+        son_iguales = self.id == other.id
+        return son_iguales
+
+    # mayor que
+    def __gt__(self, other):
+        mayor_que = self.id > other.id
+        return mayor_que
+
+    # diferente de
+    def __ne__(self, other):
+        diferente = self.id != other.id
+        return diferente
+
+    def __str__(self):
+        return f"Estudiante con id {self.id}"
+
+
 class nodoSimple:
     def __init__(self, d=None):
         self.dato = d
@@ -218,37 +246,78 @@ class LSL:
                 if nodo is None:
                     raise IndexError("Valor por fuera de los límites de la lista.")
                 j += 1
-            return nodo.dato
+            return nodo  # .dato
 
-    def intercambiar(self, nodo0, nodo1, nodo2):
+    def intercambiar(self, nodo1, nodo1_prev, nodo2, nodo2_prev):
         """
         Intercambia las posiciones de dos nodos (nodo1, nodo2) en una LSL.
 
         Requiere también el nodo anterior a nodo1 (nodo0) para actualizar su
         liga.
         """
+        liga_aux1 = nodo1.liga
+        liga_aux2 = nodo2.liga
+        if nodo1 == nodo2:
+            return
+
         if nodo1 is self.primerNodo():
-            #primer caso, intercambia con un nodo intermedio
+            # primer caso, intercambia con un nodo intermedio
             if nodo2 != self.ultimoNodo():
-                liga_aux = nodo2.retornarLiga()
-                nodo2.liga = nodo1
-                nodo1.liga = liga_aux
-                self.primero = nodo2
+                # Intercambia primer nodo con el nodo siguiente (no el último)
+                if nodo1.liga == nodo2:
+                    nodo2.liga = nodo1
+                    nodo1.liga = liga_aux2
+                    self.primero = nodo2
+                # Intercambia primer nodo con nodo intermedio (no el último)
+                else:
+                    self.primero = nodo2
+                    nodo2.liga = liga_aux1
+                    nodo1.liga = liga_aux2
+                    nodo2_prev.liga = nodo1
+            # Intercambia el primer nodo por el último nodo
             else:
-                liga_aux = nodo2.retornarLiga()
-                nodo2.liga = nodo1
-                nodo1.liga = liga_aux
+                nodo2.liga = liga_aux1
+                nodo1.liga = None
                 self.primero = nodo2
                 self.ultimo = nodo1
+                nodo2_prev.liga = nodo1
         else:
+
             if nodo2 != self.ultimoNodo():
-                nodo0.liga = nodo2
-                liga_aux = nodo2.retornarLiga()
-                nodo2.liga = nodo1
-                nodo1.liga = liga_aux
+                # Intercambia un nodo intermeido con el nodo siguiente (no el último)
+                if nodo1.liga == nodo2:
+                    nodo2.liga = nodo1
+                    nodo1.liga = liga_aux2
+                    nodo1_prev.liga = nodo2
+                # Intercambia un nodo intermedio con un nodo no adyacente (no el último)
+                else:
+                    nodo2.liga = liga_aux1
+                    nodo1.liga = liga_aux2
+                    nodo1_prev.liga = nodo2
+                    nodo2_prev.liga = nodo1
+
             else:
-                nodo0.liga = nodo2
-                liga_aux = nodo2.retornarLiga()
-                nodo2.liga = nodo1
-                nodo1.liga = liga_aux
+                # Intercambiar penúltimo con último
+                if nodo1.liga == nodo2:
+                    nodo1.liga = None
+                    nodo2.liga = nodo1
+                    nodo1_prev.liga = nodo2
+                # Intercambiar intermedio con último
+                else:
+                    nodo2_prev.liga = nodo1
+                    nodo1_prev.liga = nodo2
+                    nodo2.liga = liga_aux1
+                    nodo1.liga = None
                 self.ultimo = nodo1
+
+    def ordenamientoPorSeleccion(self):
+        for i in range(0, self.longitud() - 1):
+            k = i
+            for j in range(i + 1, self.longitud()):
+                if self[j].dato < self[k].dato:
+                    k = j
+            if i == 0:
+                nodo1_prev = None
+            else:
+                nodo1_prev = self[i - 1]
+            self.intercambiar(self[i], nodo1_prev, self[k], self[k - 1])
