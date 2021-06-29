@@ -196,3 +196,5 @@ window.mainloop()
 
 
 # https://runestone.academy/runestone/books/published/thinkcspy/GUIandEventDrivenProgramming/02_standard_dialog_boxes.html <- Cómo sacar ventanas de diálogo con mensajes cortos
+
+# Interfaz orientada a objetos: https://python-para-impacientes.blogspot.com/2015/12/tkinter-disenando-ventanas-graficas.html
