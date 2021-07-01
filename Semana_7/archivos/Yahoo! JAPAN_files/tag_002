@@ -1,0 +1,6 @@
+BrightTag.site('2wzBV9u',function(s){
+s.domready(function(){
+s.dbe('nielsendcr_url', 'document.URL',{pageId:103955052});
+s.tag('\x3cscript type\x3d\x22text/javascript\x22\x3e\n  !function(t,n){t[n]\x3dt[n]||{nlsQ:function(e,o,c,r,s,i){return s\x3dt.document,r\x3ds.createElement(\x22script\x22),r.async\x3d1,r.src\x3d(\x22http:\x22\x3d\x3d\x3dt.location.protocol?\x22http:\x22:\x22https:\x22)+\x22//cdn-gl.imrworldwide.com/conf/\x22+e+\x22.js#name\x3d\x22+o+\x22\x26ns\x3d\x22+n,i\x3ds.getElementsByTagName(\x22script\x22)[0],i.parentNode.insertBefore(r,i),t[o]\x3dt[o]||{g:c,ggPM:function(n,e,c,r,s){(t[o].q\x3dt[o].q||[]).push([n,e,c,r,s])}}, t[o]}}}(window,\x22NOLBUNDLE\x22);\n\n  var nSdkInstance\x3d NOLBUNDLE.nlsQ(\x27P2ED650F9-2101-4CB9-845D-ED37E7119BAD\x27,\x27nSdkInstance\x27);\n\x3c/script\x3e\n\n\x3cscript\x3e\n  var staticMeta \x3d {  \n    \x22type\x22:\x22static\x22,\n    \x22assetid\x22:\x22'+s.data('nielsendcr_url')+'\x22,\n    \x22section\x22 : \x22top\x22,\n    \x22segB\x22: \x22segb01\x22,\n};\n  nSdkInstance.ggPM(\x22staticstart\x22,staticMeta);\n\x3c/script\x3e',{tagId:107369408});
+});
+});

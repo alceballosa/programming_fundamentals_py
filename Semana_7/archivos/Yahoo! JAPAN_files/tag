@@ -1,0 +1,27 @@
+BrightTag.site('2wzBV9u',function(s){
+s.errors(1625162428664);
+s.script('https://s.yimg.jp/images/ds/yas/tmual-2.11.0.min.js').wait(function(){
+s.dbe('ds_dtm_ual_pv_opttype', 'TLDataContext.ual.pageview.opttype',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_ss_join_id_type', 'TLDataContext.ual.pageview.ss_join_id_type',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_mtestid', 'TLDataContext.ual.pageview.mtestid',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_id_type', 'TLDataContext.ual.pageview.id_type',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_ss_join_id', 'TLDataContext.ual.pageview.ss_join_id',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_nopv', 'TLDataContext.ual.pageview.nopv',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_hierarchy_id', 'TLDataContext.ual.pageview.hierarchy_id',{pageId:104024841});
+s.dbe('ds_dtm_ual_pv_content_id', 'TLDataContext.ual.pageview.content_id',{pageId:104024841});
+s.tag('\x3cscript type\x3d\x22text/javascript\x22\x3e\n        window.tmualcmds \x3d window.tmualcmds || [];\n        window.tmual \x3d window.tmual || function() {\n          tmualcmds.push(arguments);\n        };\n        window.tmual(\x27config\x27, \x27token\x27, "4465a92c-f0fd-406f-b519-efd409cc9849" || null);\n        window.ualPageviewFire \x3d function(params) {\n          var p \x3d typeof params \x3d\x3d\x3d \x27object\x27 ? params : {};\n\n          if (!p.referer \x26\x26 TLDataContext \x26\x26 TLDataContext.ual \x26\x26 TLDataContext.ual.pageview \x26\x26 TLDataContext.ual.pageview.referer) {\n            p.referer \x3d TLDataContext.ual.pageview.referer\n          }\n\n          window.tmual(\x27hit\x27, \x27pageview\x27, {\n            service: p.service || "toppage" || null,\n            opttype: p.opttype || (""+'+s.dataref("ds_dtm_ual_pv_opttype")+') || null,\n            content_id: p.content_id || (""+'+s.dataref("ds_dtm_ual_pv_content_id")+') || null,\n            id_type: p.id_type || (""+'+s.dataref("ds_dtm_ual_pv_id_type")+') || null,\n            nopv: typeof p.nopv !\x3d\x3d \x27undefined\x27 ? p.nopv : '+escape(s.data('ds_dtm_ual_pv_nopv'))+',\n            mtestid: p.mtestid || (""+'+s.dataref("ds_dtm_ual_pv_mtestid")+') || null,\n            ss_join_id: p.ss_join_id || (""+'+s.dataref("ds_dtm_ual_pv_ss_join_id")+') || null,\n            ss_join_id_type: p.ss_join_id_type || (""+'+s.dataref("ds_dtm_ual_pv_ss_join_id_type")+') || null,\n            hierarchy_id: p.hierarchy_id || (""+'+s.dataref("ds_dtm_ual_pv_hierarchy_id")+') || null,\n            referer: document.referrer || p.referer || document.referrer,\n          }, {\n            flush: true,\n          });\n        };\n        window.ualPageviewFire();\n      \x3c/script\x3e',{tagId:107518393});
+s.domready(function(){
+s.dbe('nielsendcr_useragent', 'navigator.userAgent',{pageId:103955052});
+s.store([{name:'btpdb.2wzBV9u.dGZjLjEwNzQwOTQ2MA',value:'REFZUw',expires:1625594428664},{name:'btpdb.2wzBV9u.dGZjLjEwNzU0MTkzNg',value:'REFZUw',expires:1625594428664}]);
+s.tag('\x3cimg src\x3d\x22//pp.d2-apps.net/v1/redirect?p_id\x3dyahoo\x26url\x3dhttps%3A%2F%2Fyjtag.yahoo.co.jp%2Fcs%3ftp%3dGvIpabp%26btt%3d0\x22 style\x3d\x22display:none\x22 height\x3d\x221\x22 width\x3d\x221\x22 /\x3e',{tagId:4638787});
+s.tag('\x3cimg src\x3d\x22//aw.dw.impact-ad.jp/c/u/?oid\x3d207d81ffda0cc019\x26rdr\x3dhttps%3A%2F%2Fyjtag.yahoo.co.jp%2Fcs%3Fbtt%3D0%26tp%3DkhADDtf%26uid%3D%7BAONEID%7D\x22 style\x3d\x22display:none;\x22 width\x3d\x221\x22 height\x3d\x221\x22 /\x3e',{tagId:4979875});
+s.tag('\x3cimg src\x3d\x22https://ib.adnxs.com/seg?add\x3d4511230\x26t\x3d2\x26redir\x3dhttps%3A%2F%2Fcksync.yahoo.co.jp%2Fdispatch%3Fptr%3D10901\x22 width\x3d\x220\x22 height\x3d\x220\x22 border\x3d\x220\x22 alt\x3d\x22\x22 /\x3e',{tagId:107409460});
+s.tag('\x3cimg src\x3d\x22https://tokyo.in.treasuredata.com/postback/v3/event/yahoo_japan/sync?td_format\x3dpixel\x26td_write_key\x3d251/d63c846e5d69ae8c35eb911dbb595628f563f130\x26td_global_id\x3dtd_global_id\x26td_redirect\x3dhttps%3A%2F%2Fyjtag.yahoo.co.jp%2Fcs%3Fuid%3Dtd_global_id%26btt%3D0%26tp%3DRQFnKLh\x22 style\x3d\x22display:none\x22 height\x3d\x221\x22 width\x3d\x221\x22 /\x3e',{tagId:107488181});
+s.tag('\x3cimg src\x3d\x22https://cksync.yahoo.co.jp/sspsync?ptr\x3d12703\x22 width\x3d\x220\x22 height\x3d\x220\x22 border\x3d\x220\x22 alt\x3d\x22\x22 /\x3e',{tagId:107541936});
+s.tag('\x3cimg src\x3d\x22https://yjtag.yahoo.co.jp/csx?tp\x3d8FzrfRY\x22 style\x3d\x22display:none\x22 /\x3e',{tagId:107572135});
+s.secondary(function(c){
+c.when('(bt_data(\x27nielsendcr_useragent\x27).indexOf(\x22YJApp-IOS\x22) \x3c 0 \x26\x26 bt_data(\x27nielsendcr_useragent\x27).indexOf(\x22YJApp-ANDROID\x22) \x3c 0)').fire(107369408);
+});
+});
+});
+});
